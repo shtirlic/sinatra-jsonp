@@ -28,6 +28,6 @@ Simple example:
 
     get '/' do
       data = ["hello","hi","hallo"]
-      JSONP data, 'functionA'
+      jsonp data, 'functionA'
     end
 

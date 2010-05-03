@@ -4,7 +4,7 @@ require 'json'
 module Sinatra
   module Jsonp
     # Format data according to request JSON/JSONP
-    def JSONP(obj, callback = nil) 
+    def jsonp(obj, callback = nil) 
       data = obj.to_json
       ['callback','jscallback','jsonp'].each do |x| 
         callback = params.delete(x) if not callback
@@ -17,6 +17,7 @@ module Sinatra
       end
       response
     end
+    alias JSONP jsonp
   end
   helpers Jsonp
 end
