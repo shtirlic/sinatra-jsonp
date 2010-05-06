@@ -31,3 +31,9 @@ Simple example:
       jsonp data, 'functionA'
     end
 
+License
+-------
+
+sinatra-jsonp is licensed under the MIT license.
+
+
