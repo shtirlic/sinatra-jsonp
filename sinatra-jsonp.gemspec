@@ -1,11 +1,11 @@
 SPEC = Gem::Specification.new do |s|
 
   s.name             = "sinatra-jsonp"
-  s.version          = "0.1"
-  s.description      = "Simple extension to produce JSONP/JSON output"
+  s.version          = "0.1.1"
+  s.description      = "JSONP output helper for Sinatra"
 
   s.add_dependency "sinatra", "~> 1.0"
-  s.add_dependency "json", "~> 1.4"
+  s.add_dependency "json_pure", "~> 1.4"
 
   s.authors          = ["Serg Podtynnyi"]
   s.email            = "serg.podtynnyi@gmail.com"
