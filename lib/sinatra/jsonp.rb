@@ -3,19 +3,24 @@ require 'json'
 
 module Sinatra
   module Jsonp
-    # Format data according to request JSON/JSONP
-    def jsonp(obj, callback = nil) 
-      data = obj.to_json
-      ['callback','jscallback','jsonp'].each do |x| 
-        callback = params.delete(x) if not callback
+    def jsonp(*args) 
+      if args.size > 0
+        data = args[0].to_json
+        if args.size > 1
+          callback = args[1].to_s
+        else
+          ['callback','jscallback','jsonp'].each do |x| 
+            callback = params.delete(x) if not callback
+          end
+        end
+        if callback
+          content_type :js
+          response = "#{callback}(#{data})"
+        else
+          response = data
+        end
+        response
       end
-      if callback
-        content_type :js
-        response = "#{callback}(#{data})"
-      else
-        response = data
-      end
-      response
     end
     alias JSONP jsonp
   end
