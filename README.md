@@ -24,14 +24,12 @@ get '/hello' do
 end
 
 # define your own callback as second string param
-
 get '/hi' do
   data = ["hello","hi","hallo"]
   jsonp data, 'functionA'
 end
 
 # same with symbol param
-
 get '/hallo' do
   data = ["hello","hi","hallo"]
   jsonp data, :functionB
