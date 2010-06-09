@@ -1,20 +1,20 @@
 Sinatra::JSONP
 =================
 
-JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params
-and returns proper JSONP output. If no callback params where detected it returns plain JSON.
+JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output. 
+If no callback params where detected it returns plain JSON.
 Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/) method out of the box.
 
 
 Installation
 ------------
-
+<pre>
 sudo gem install sinatra-jsonp
-
+</pre>
 
 Usage
 -----
-
+<pre>
 require "sinatra"
 require "sinatra/jsonp"
 
@@ -34,7 +34,7 @@ get '/hallo' do
   data = ["hello","hi","hallo"]
   jsonp data, :functionB
 end
-
+</pre>
 
 Links
 -----
@@ -47,4 +47,3 @@ License
 -------
 
 sinatra-jsonp is licensed under the MIT license.
-
