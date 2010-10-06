@@ -9,7 +9,7 @@ Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQ
 Installation
 ------------
 <pre>
-sudo gem install sinatra-jsonp
+gem install sinatra-jsonp
 </pre>
 
 Usage
