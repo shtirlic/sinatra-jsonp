@@ -9,7 +9,7 @@ module Sinatra
         if args.size > 1
           callback = args[1].to_s
         else
-          ['callback','jscallback','jsonp'].each do |x| 
+          ['callback','jscallback','jsonp','jsoncallback'].each do |x|
             callback = params.delete(x) if not callback
           end
         end
