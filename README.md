@@ -1,4 +1,4 @@
-Sinatra::JSONP
+Sinatra::Jsonp
 =================
 
 JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output. 
@@ -8,33 +8,48 @@ Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQ
 
 Installation
 ------------
-<pre>
-gem install sinatra-jsonp
-</pre>
+
+    gem install sinatra-jsonp
 
 Usage
 -----
-<pre>
-require "sinatra"
-require "sinatra/jsonp"
 
-get '/hello' do
-  data = ["hello","hi","hallo"]
-  JSONP data      # JSONP is an alias for jsonp method
-end
+Classic:
 
-# define your own callback as second string param
-get '/hi' do
-  data = ["hello","hi","hallo"]
-  jsonp data, 'functionA'
-end
+    require "sinatra"
+    require "sinatra/jsonp"
 
-# same with symbol param
-get '/hallo' do
-  data = ["hello","hi","hallo"]
-  jsonp data, :functionB
-end
-</pre>
+    get '/hello' do
+      data = ["hello","hi","hallo"]
+      JSONP data      # JSONP is an alias for jsonp method
+    end
+
+    # define your own callback as second string param
+    get '/hi' do
+      data = ["hello","hi","hallo"]
+      jsonp data, 'functionA'
+    end
+
+    # same with symbol param
+    get '/hallo' do
+      data = ["hello","hi","hallo"]
+      jsonp data, :functionB
+    end
+
+Modular:
+
+    require "sinatra/base"
+    require "sinatra/jsonp"
+
+    class Foo < Sinatra::Base
+      helpers Sinatra::Jsonp
+
+      get '/' do
+        data = ["hello","hi","hallo"]
+        jsonp data
+      end
+    end
+
 
 Links
 -----
