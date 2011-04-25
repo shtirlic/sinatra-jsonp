@@ -1,0 +1,47 @@
+GIT
+  remote: git://github.com/sinatra/sinatra-contrib.git
+  revision: 8db79da471d6f06d7a70ed88f3bb03db6d5bc212
+  specs:
+    sinatra-contrib (1.2.0)
+      backports (>= 2.0)
+      rack-test
+      sinatra (~> 1.2.2)
+
+PATH
+  remote: .
+  specs:
+    sinatra-jsonp (0.3)
+      json_pure (~> 1.4)
+      sinatra (~> 1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (2.1.0)
+    diff-lcs (1.1.2)
+    json_pure (1.5.1)
+    rack (1.2.2)
+    rack-test (0.5.7)
+      rack (>= 1.0)
+    rake (0.8.7)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.1)
+    rspec-expectations (2.5.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.5.0)
+    sinatra (1.2.3)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  rspec (~> 2.3)
+  sinatra-contrib!
+  sinatra-jsonp!
