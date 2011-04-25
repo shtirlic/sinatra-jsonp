@@ -65,4 +65,4 @@ Links
 License
 -------
 
-sinatra-jsonp is licensed under the MIT license.
+See LICENSE for details.
