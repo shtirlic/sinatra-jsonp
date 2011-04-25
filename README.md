@@ -9,13 +9,16 @@ Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQ
 Installation
 ------------
 
-    gem install sinatra-jsonp
+```bash
+gem install sinatra-jsonp
+```
 
 Usage
 -----
 
 Classic:
 
+```ruby
     require "sinatra"
     require "sinatra/jsonp"
 
@@ -35,9 +38,10 @@ Classic:
       data = ["hello","hi","hallo"]
       jsonp data, :functionB
     end
-
+```
 Modular:
 
+```ruby
     require "sinatra/base"
     require "sinatra/jsonp"
 
@@ -49,7 +53,7 @@ Modular:
         jsonp data
       end
     end
-
+```
 
 Links
 -----
