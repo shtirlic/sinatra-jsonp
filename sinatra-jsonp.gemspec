@@ -13,7 +13,6 @@ Gem::Specification.new do |s|
   s.authors          = ["Serg Podtynnyi"]
   s.email            = "serg.podtynnyi@gmail.com"
   s.files            = Dir["**/*.{rb,md}"]+['Rakefile', 'LICENSE']
-  s.has_rdoc         = 'yard'
   s.homepage         = "http://github.com/shtirlic/#{s.name}"
   s.require_paths    = ["lib"]
   s.summary          = s.description
