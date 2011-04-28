@@ -1,7 +1,7 @@
 Sinatra::Jsonp ![Project status](http://stillmaintained.com/shtirlic/sinatra-jsonp.png)
 ==============
 
-JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output. 
+JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output.
 If no callback params where detected it returns plain JSON.
 Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/) method out of the box.
 
@@ -9,8 +9,16 @@ Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQ
 Installation
 ------------
 
+System install
+
 ```bash
 gem install sinatra-jsonp
+```
+
+Gemfile
+
+```ruby
+gem 'sinatra-jsonp', :require => 'sinatra/jsonp'
 ```
 
 Usage
