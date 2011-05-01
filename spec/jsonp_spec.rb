@@ -1,5 +1,5 @@
+require 'backports'
 require_relative 'spec_helper'
-require 'sinatra/jsonp'
 
 describe Sinatra::Jsonp do
   before do
