@@ -27,40 +27,40 @@ Usage
 Classic:
 
 ```ruby
-    require "sinatra"
-    require "sinatra/jsonp"
+require "sinatra"
+require "sinatra/jsonp"
 
-    get '/hello' do
-      data = ["hello","hi","hallo"]
-      JSONP data      # JSONP is an alias for jsonp method
-    end
+get '/hello' do
+  data = ["hello","hi","hallo"]
+  JSONP data      # JSONP is an alias for jsonp method
+end
 
-    # define your own callback as second string param
-    get '/hi' do
-      data = ["hello","hi","hallo"]
-      jsonp data, 'functionA'
-    end
+# define your own callback as second string param
+get '/hi' do
+  data = ["hello","hi","hallo"]
+  jsonp data, 'functionA'
+end
 
-    # same with symbol param
-    get '/hallo' do
-      data = ["hello","hi","hallo"]
-      jsonp data, :functionB
-    end
+# same with symbol param
+get '/hallo' do
+  data = ["hello","hi","hallo"]
+  jsonp data, :functionB
+end
 ```
 Modular:
 
 ```ruby
-    require "sinatra/base"
-    require "sinatra/jsonp"
+require "sinatra/base"
+require "sinatra/jsonp"
 
-    class Foo < Sinatra::Base
-      helpers Sinatra::Jsonp
+class Foo < Sinatra::Base
+  helpers Sinatra::Jsonp
 
-      get '/' do
-        data = ["hello","hi","hallo"]
-        jsonp data
-      end
-    end
+  get '/' do
+    data = ["hello","hi","hallo"]
+    jsonp data
+  end
+end
 ```
 
 Links
