@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name             = "sinatra-jsonp"
-  s.version          = "0.3.1"
+  s.version          = "0.3.2"
   s.description      = "JSONP output helper for Sinatra"
 
   s.add_dependency "sinatra", "~> 1.0"
@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec", "~> 2.3"
   s.add_development_dependency "rake"
+  s.add_development_dependency "sinatra-contrib", "~> 1.0"
 
   s.authors          = ["Serg Podtynnyi"]
   s.email            = "serg.podtynnyi@gmail.com"
