@@ -1,11 +1,11 @@
 require 'sinatra/base'
-require 'json'
+require 'multi_json'
 
 module Sinatra
   module Jsonp
     def jsonp(*args)
       if args.size > 0
-        data = args[0].to_json
+        data = MultiJson.dump args[0]
         if args.size > 1
           callback = args[1].to_s
         else
