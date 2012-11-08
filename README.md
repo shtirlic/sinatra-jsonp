@@ -1,4 +1,4 @@
-Sinatra::Jsonp ![Travis-ci](https://secure.travis-ci.org/shtirlic/sinatra-jsonp.png)
+Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp)
 ==============
 
 JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output.
