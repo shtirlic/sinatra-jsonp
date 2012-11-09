@@ -18,7 +18,7 @@ gem install sinatra-jsonp
 Gemfile
 
 ```ruby
-gem 'sinatra-jsonp', :require => 'sinatra/jsonp'
+gem 'sinatra-jsonp'
 ```
 
 Usage
