@@ -25,6 +25,12 @@ describe Sinatra::Jsonp do
     get '/method?callback=functionA'
     body.should == 'functionA(["hello","hi","hallo"])'
   end
+
+  it "returns JSONP with sanitized callback" do
+    get '/method', { :callback=>'foo<script>alert(1)</script>' }
+    body.should == 'fooscriptalert1script(["hello","hi","hallo"])'
+  end
+
   it "returns JSONP if callback passed via method param" do
     get '/method_with_params'
     body.should == 'functionA(["hello","hi","hallo"])'
