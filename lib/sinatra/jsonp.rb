@@ -5,7 +5,7 @@ module Sinatra
   module Jsonp
     def jsonp(*args)
       if args.size > 0
-        data = MultiJson.dump args[0]
+        data = MultiJson.dump args[0], :pretty => settings.respond_to?(:json_pretty) && settings.json_pretty
         if args.size > 1
           callback = args[1].to_s
         else

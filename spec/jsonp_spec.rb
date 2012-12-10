@@ -39,4 +39,17 @@ describe Sinatra::Jsonp do
     get '/method_with_params?callback=functionB'
     body.should == 'functionA(["hello","hi","hallo"])'
   end
+
+  it "return pretty JSON if :json_pretty enabled" do
+    mock_app do
+      helpers Sinatra::Jsonp
+      enable :json_pretty
+      get '/method' do
+        data = ["hello","hi","hallo"]
+        jsonp data
+      end
+    end
+    get '/method'
+    body.should == "[\n  \"hello\",\n  \"hi\",\n  \"hallo\"\n]"
+  end
 end
