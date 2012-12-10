@@ -1,13 +1,12 @@
-Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp)
-==============
+# Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp)
 
 JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output.
 If no callback params where detected it returns plain JSON.
 Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/) method out of the box.
 
 
-Installation
-------------
+## Installation
+
 
 System install
 
@@ -21,8 +20,8 @@ Gemfile
 gem 'sinatra-jsonp'
 ```
 
-Usage
------
+## Usage
+
 
 Classic:
 
@@ -56,6 +55,9 @@ require "sinatra/jsonp"
 class Foo < Sinatra::Base
   helpers Sinatra::Jsonp
 
+  # Enable JSON pretty output
+  #enable :json_pretty
+
   get '/' do
     data = ["hello","hi","hallo"]
     jsonp data
@@ -63,14 +65,14 @@ class Foo < Sinatra::Base
 end
 ```
 
-Links
------
+## Links
+
 
 * [jQuery](http://jquery.com)
 * [Sinatra](http://www.sinatrarb.com)
 
 
-License
--------
+## License
+
 
 See LICENSE for details.
