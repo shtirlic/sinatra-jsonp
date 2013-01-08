@@ -1,14 +1,14 @@
 # Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp)
 
 JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output.
-If no callback params where detected it returns plain JSON.
-Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/) method out of the box.
+If callback params where not detected it returns plain JSON.
+Works with [jQuery](http://jquery.com) [jQuery.getJSON](http://api.jquery.com/jQuery.getJSON/) out of the box.
 
 
 ## Installation
 
 
-System install
+Gem install
 
 ```bash
 gem install sinatra-jsonp
