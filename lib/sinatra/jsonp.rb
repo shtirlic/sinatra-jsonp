@@ -18,6 +18,7 @@ module Sinatra
           content_type :js
           response = "#{callback}(#{data})"
         else
+          content_type :json
           response = data
         end
         response
