@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
 
   s.name             = "sinatra-jsonp"
-  s.version          = "0.4.1"
+  s.version          = "0.4.2"
   s.description      = "JSONP output helper for Sinatra"
 
   s.add_dependency "sinatra", "~> 1.0"
