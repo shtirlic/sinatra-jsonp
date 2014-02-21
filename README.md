@@ -75,4 +75,4 @@ end
 ## License
 
 
-See LICENSE for details.
+MIT License. See LICENSE for details.
