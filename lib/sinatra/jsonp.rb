@@ -3,21 +3,14 @@ require 'multi_json'
 
 module Sinatra
   module Jsonp
+    CALLBACK_PARAMS = %w( callback jscallback jsonp jsoncallback ).freeze
+
     def jsonp(*args)
-      # requires 1 or more arguments
       return if args.size < 1
 
-      # The first argument is the object to serialize
       data = MultiJson.dump(args[0], :pretty => display_pretty_json?)
-      # If we have another argument it is the callback function name
-      if args.size > 1
-        callback = args[1].to_s
-      else
-        # If not then determine the callback based on the following parameters
-        ['callback','jscallback','jsonp','jsoncallback'].each do |x|
-          callback = params.delete(x) unless callback
-        end
-      end
+      callback = extract_callback_name(args[1])
+
       # If we have a callback perform some basic sanitization and set the
       # response content type and the eventual response body
       if callback
@@ -38,6 +31,18 @@ module Sinatra
 
     def display_pretty_json?
       !!(settings.respond_to?(:json_pretty) && settings.json_pretty)
+    end
+
+    def extract_callback_name(name = nil)
+      if name.nil?
+        callback = nil
+        CALLBACK_PARAMS.each do |key|
+          callback = params.delete(key) unless callback
+        end
+        callback ? callback.to_s : nil
+      else
+        name.to_s
+      end
     end
   end
   helpers Jsonp
