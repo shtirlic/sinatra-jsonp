@@ -7,9 +7,10 @@ Gem::Specification.new do |s|
   s.add_dependency "sinatra", "~> 1.0"
   s.add_dependency "multi_json", "~> 1.8"
 
-  s.add_development_dependency "rspec", "~> 2.3"
-  s.add_development_dependency 'rake', '~> 0'
-  s.add_development_dependency "sinatra-contrib", "~> 1.0"
+  s.add_development_dependency 'rspec', '~> 2.3'
+  s.add_development_dependency 'rake', '>= 0'
+  s.add_development_dependency 'sinatra-contrib', '~> 1.0'
+  s.add_development_dependency 'test-unit', '~> 3.0.9'
 
   s.authors          = ["Serg Podtynnyi"]
   s.email            = "serg.podtynnyi@gmail.com"
