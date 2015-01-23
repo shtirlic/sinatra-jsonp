@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.email            = "serg.podtynnyi@gmail.com"
   s.files            = Dir["**/*.{rb,md}"]+['Rakefile', 'LICENSE']
   s.homepage         = "http://github.com/shtirlic/#{s.name}"
+  s.license          = "MIT"
   s.require_paths    = ["lib"]
   s.summary          = s.description
 
