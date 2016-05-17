@@ -1,4 +1,4 @@
-# Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp)
+# Sinatra::Jsonp [![Build Status](https://travis-ci.org/shtirlic/sinatra-jsonp.png)](https://travis-ci.org/shtirlic/sinatra-jsonp) [![Gem Version](https://badge.fury.io/rb/sinatra-jsonp.svg)](https://badge.fury.io/rb/sinatra-jsonp)
 
 JSONP output helper for [Sinatra](http://sinatrarb.com). Automatically detects callback params and returns proper JSONP output.
 If callback params where not detected it returns plain JSON.
