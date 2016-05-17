@@ -3,6 +3,5 @@ rvm:
   - 1.9.3
   - jruby
   - ruby-head
-  - ree
 before_install:
   - gem update bundler
